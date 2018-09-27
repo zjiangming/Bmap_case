@@ -1,4 +1,6 @@
 # Bmap_case
+引入js
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=您的密钥"></script>
 
     var map = new _BMAP('Bmap')
     // 添加控件
