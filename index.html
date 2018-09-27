@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&amp;ak=Hc9xhrPFappE82G2cmBIoyUy"></script>
+    <script type="text/javascript" src="./dist/Bmap.js"></script>
+</head>
+<body>
+    <div id="Bmap" style="height: 400px;"></div>
+
+    <script>
+        var data = [{
+            lat: 116.404,
+            lng: 39.915,
+            title: '天安门',
+            imgUrl: 'http://lbsyun.baidu.com/jsdemo/img/tianAnMen.jpg',
+            content: '这是中华人民共和国天安门……'
+        },{
+            lat: 116.104,
+            lng: 39.915,
+            title: 'cc',
+            imgUrl: 'http://lbsyun.baidu.com/jsdemo/img/tianAnMen.jpg',
+            content: '这是cc……'
+        }]
+        var map = new _BMAP('Bmap')
+        map.addControl(['tl_control', 'tl_navigation'])
+        data.forEach(function(item) {
+            map.markerAdd(item)
+        })
+    </script>
+</body>
+</html>
